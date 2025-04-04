@@ -54,10 +54,13 @@ int main()
     string startupArguments = FileUtilities::ReadFileContents(startupArgumentsPath);
     if (startupArguments.empty()) 
     {
-        Close("ERROR: Failed to read \"" + startupArgumentsPath + "\" file contents!");
+        cout << "Startup Arguments: Failed to read \"" + startupArgumentsPath + "\" file contents or there's no startup arguments set!" << endl;
     }
-    cout << "Startup Arguments: " << startupArguments << endl;
-
+    else 
+    {
+        cout << "Startup Arguments: " << startupArguments << endl;
+    }
+    
 
     if (WindowsUtilities::StartProcess(startupTarget, startupArguments) == false) 
     {
