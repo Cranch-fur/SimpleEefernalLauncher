@@ -2,7 +2,6 @@
 
 #include <conio.h>
 #include <windows.h>
-#include <iostream>
 #include "CranchyLib.h"
 
 using namespace std;
